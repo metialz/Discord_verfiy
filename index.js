@@ -36,9 +36,10 @@ client.on('message', message => {
   // verficition finish
   if (cmd === 'v'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
+      const Ommaree = client.emojis.cache.get("877383152094572544")
       const member = message.mentions.members.first()
       member.roles.remove('875620544010133544')
-      member.send('helloo ');
+      member.send(`Salam , be servere 𝗠𝗢𝗢𝗗𝗬 khosh omadi azizam , shoma verify shodid ${Ommaree}`);
       client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
     }
   }
