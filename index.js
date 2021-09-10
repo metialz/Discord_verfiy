@@ -34,7 +34,16 @@ client.on('message', message => {
     }
   }
   // verficition finish
-
+  if (cmd === 'verify'){
+    if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
+      const member = message.mentions.members.first()
+      member.roles.remove('875620544010133544')
+      client.users.fetch(member, false).then((user) => {
+        user.send('heloo');
+       });
+      client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
+    }
+  }
   // give role end
   if (cmd === 'nickname'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
