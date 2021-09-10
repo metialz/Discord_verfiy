@@ -45,6 +45,19 @@ client.on('message', message => {
       client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
     }
   }
+   if (cmd === 'reject') {
+    if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
+      const poll = new Discord.MessageEmbed()
+      const poop = client.emojis.cache.get("881296160764092466")
+      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .addField(`یه پیام دارم برا ممبر عزیزی که لفت دادی از ریجکت در بیای بیا بشین روش عزیز منظورم کانکت تو ادمین ${poop}:eggplant:`, '__ __')
+      .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .setColor('blue')
+      .setImage('https://cdn.discordapp.com/attachments/781822832245342208/885833148619952138/doc_2021-09-10_14-43-50.gif')
+      .setThumbnail('https://cdn.discordapp.com/attachments/781822832245342208/885836645058899968/ezgif.com-gif-maker.gif')
+      message.channel.send(poll)
+    }
+  }
   // give role end
   if (cmd === 'nickname'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
