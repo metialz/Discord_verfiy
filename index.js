@@ -38,7 +38,7 @@ client.on('message', message => {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const member = message.mentions.members.first()
       member.roles.remove('875620544010133544')
-      member.send('helloo');
+      member.send('helloo kos nne');
       client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
     }
   }
