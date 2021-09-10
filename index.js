@@ -27,7 +27,7 @@ client.on('message', message => {
         embedMessage.react('🟢')
           client.on('messageReactionAdd', function (messageReaction, user) {
             if (messageReaction.emoji.name === '🟢') {
-              client.channels.cache.get('875067202057961504').send('<@&875067202057961504> Yeki To Waitinge Check Konid')
+              client.channels.cache.get('875067202057961504').send('<@&874693067045732363> Yeki To Waitinge Check Konid')
             }
           })
       })
