@@ -34,7 +34,7 @@ client.on('message', message => {
     }
   }
   // verficition finish
-  if (cmd === 'verify'){
+  if (cmd === 'v'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const member = message.mentions.members.first()
       member.roles.remove('875620544010133544')
