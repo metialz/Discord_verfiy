@@ -33,6 +33,18 @@ client.on('message', message => {
       })
     }
   }
+	
+if (cmd === 'reject') {
+    if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
+      const poll = new Discord.MessageEmbed()
+      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .addField('خوردیش؟ تف کن', '__ __')
+      .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .setColor('blue')
+      .setThumbnail('https://cdn.discordapp.com/attachments/781822832245342208/885833148619952138/doc_2021-09-10_14-43-50.gif')
+      message.channel.send(poll)
+    }
+  }
   // verficition finish
   if (cmd === 'v'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
