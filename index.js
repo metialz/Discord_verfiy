@@ -12,7 +12,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (message.channel.id === '875067223377584198'){
-	 client.channels.cache.get('875067223377584198').send(`test`)
+	 client.channels.cache.get('875067223377584198').send(`tesasdat`)
 	}
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
