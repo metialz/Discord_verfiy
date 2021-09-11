@@ -15,7 +15,9 @@ client.on('message', message => {
 
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const cmd = args.shift().toLowerCase();
-
+	if (message.channel.id === '875067223377584198'){
+	message.channel.send("test");
+	}
 
   // verficition start
   if (cmd === 'setup') {
