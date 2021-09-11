@@ -6,6 +6,8 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
 	console.log('Ready!');
+    client.user.setStatus('WATCHING');
+    client.user.setGame('✠ 𝙈𝙊𝙊𝘿𝙔 ✠');
 });
 
 client.on('message', message => {
