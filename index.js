@@ -11,13 +11,13 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	if (message.channel.id === '875067223377584198'){
+	 client.channels.cache.get('875067223377584198').send(`test`)
+	}
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const cmd = args.shift().toLowerCase();
-	if (message.channel.id === '875067223377584198'){
-	client.channels.cache.get('875067223377584198').send(`test`)
-	}
 
   // verficition start
   if (cmd === 'setup') {
