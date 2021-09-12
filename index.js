@@ -53,6 +53,19 @@ client.on('message', message => {
       client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
     }
   }
+
+  if (cmd === 'r'){
+    if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
+      const member = message.mentions.members.first()
+      member.roles.add('886511292314185758')
+      client.channels.cache.get('885829208813740062').send(`:green_square: ${message.author.username} be <@${member.id}> role reject dad`)
+      fs.writeFileSync(`./ban/${member.id}.json`, `${message.author.id}, ${message.author.username}`)
+    }
+      else{
+      message.channel.send('koskesh kiri bia kiramo bokhor')
+    }
+  }
+	
    if (cmd === 'reject') {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const poll = new Discord.MessageEmbed()
@@ -82,5 +95,21 @@ client.on('message', message => {
     }
   }
 })
+
+client.on("guildMemberAdd", member => {
+    fs.readdir("./ban/", (err, files) => {
+        if (err) return console.error;
+        files.forEach((file) => {
+          if (!file.endsWith(".json")) return;
+          let evtName = file.split(".")[0];
+          console.log(`Banned User '${evtName}'`);
+          if (member.id === evtName){
+            member.roles.add('886511292314185758')
+            member.roles.remove('875620544010133544')
+            member.guild.channels.cache.get("885829208813740062").send(`Yek Madar Jende Ba Id  <@${member.id}> Reject Shode bood Left Dad Ta Maro Kir Kone Ke Nanash Kir Khord`);
+          }
+        });
+    })
+});
 
 client.login(config.token);
