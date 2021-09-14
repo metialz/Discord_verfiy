@@ -57,7 +57,7 @@ client.on('message', message => {
       const member = message.mentions.members.first()
       member.roles.remove('875620544010133544')
       member.send(`Salam , be servere 𝗠𝗢𝗢𝗗𝗬 khosh omadi azizam , shoma verify shodid ${Ommaree}`);
-      client.channels.cache.get('875067202057961504').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
+      client.channels.cache.get('885829156020027393').send(`${message.author.username} New Member ${member} ra Verify Kard.`)
     }
   }
 
