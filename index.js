@@ -24,6 +24,7 @@ client.on('message', message => {
      	 .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
     	 .setColor('blue')
 	.setThumbnail('https://cdn.discordapp.com/attachments/781822832245342208/887366452741545984/5005dbccb59bc9929274c043b848eb84.gif')
+	.setImage('https://cdn.discordapp.com/attachments/781822832245342208/887366452741545984/5005dbccb59bc9929274c043b848eb84.gif')
     	 message.channel.send(poll)
 	}
   // verficition start
