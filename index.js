@@ -11,20 +11,19 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.channel.id === '887347686083285012'){
+	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
+	const cmd = args.shift().toLowerCase();
+	if (cmd === 'pm'){
 	// message.delete();
 	const poll = new Discord.MessageEmbed()
      	 .setAuthor(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
-     	 .addField(' PV Commands : \n \n \n :star3: برای لیمیت گذاشتن و تنظیم تعداد چنل خود دستور :-nv c limit 2 \n \n \n :star3: برای پنهان کردن و هاید کردنه چنل خود دستور : -nv c hide \n \n \n :star3: و بلعکس برای در آوردن چنل از حالت پنهان و نمایش آن برای عموم دستور : -nv c show \n \n \n :star3: برای قفل کردن و لاک کردن چنل خود دستور :  -nv c lock \n \n \n :star3: و برای باز کردن قفل چنل : -nv c unlock \n', '__ __')
+     	 .addField(` PV Commands : \n \n \n :star3: برای لیمیت گذاشتن و تنظیم تعداد چنل خود دستور :-nv c limit 2 \n \n \n :star3: برای پنهان کردن و هاید کردنه چنل خود دستور : -nv c hide \n \n \n :star3: و بلعکس برای در آوردن چنل از حالت پنهان و نمایش آن برای عموم دستور : -nv c show \n \n \n :star3: برای قفل کردن و لاک کردن چنل خود دستور :  -nv c lock \n \n \n :star3: و برای باز کردن قفل چنل : -nv c unlock \n`, '__ __')
      	 .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
     	 .setColor('blue')
 	.setThumbnail('https://cdn.discordapp.com/attachments/781822832245342208/887366452741545984/5005dbccb59bc9929274c043b848eb84.gif')
     	 message.channel.send(poll)
 	}
-	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
-	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
-	const cmd = args.shift().toLowerCase();
-
   // verficition start
   if (cmd === 'setup') {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
