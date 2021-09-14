@@ -12,7 +12,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (message.channel.id === '887347686083285012'){
-	setTimeout(message.delete(), 3000);
+	message.delete();
 	}
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
