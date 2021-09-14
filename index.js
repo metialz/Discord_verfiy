@@ -11,12 +11,8 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.channel.id === '875067223377584198'){
-	var member= message.mentions.members.first();
-	let embed = new Discord.RichEmbed()
- 	 .setImage(message.member.avatarURL)
- 	 .setColor('#275BF0')
- 	 message.channel.send(embed);
+	if (message.channel.id === '887347686083285012'){
+	message.delete();
 	}
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
