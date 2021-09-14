@@ -14,7 +14,7 @@ client.on('message', message => {
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const cmd = args.shift().toLowerCase();
-	if (message.channel.id === 887347686083285012 ){
+	if (message.channel.id === "887347686083285012" ){
 	message.delete();	
 	}
 	if (cmd === 'pm'){
