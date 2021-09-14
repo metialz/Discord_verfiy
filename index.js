@@ -11,14 +11,15 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+	if (message.channel.id === '887347686083285012'){
+		message.delete();
+	}
+	
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const cmd = args.shift().toLowerCase();
-	if (message.channel.id === "887347686083285012" ){
-	message.delete();	
-	}
+
 	if (cmd === 'pm'){
-	// message.delete();
 	const starrr = client.emojis.cache.get("887011094420414505")
 	const poll = new Discord.MessageEmbed()
 	  .setTitle('** PV Commands **')
