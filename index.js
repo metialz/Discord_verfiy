@@ -6,8 +6,14 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
 	console.log('Ready!');
-    client.user.setStatus('WATCHING');
-    client.user.setGame('✠ 𝙈𝙊𝙊𝘿𝙔 ✠');
+});
+
+client.user.setPresence({
+    status: "online",
+    activity: {
+        name: "𝗦𝗘𝗡𝗧𝗜𝗠𝗘𝗡𝗧",
+        type: "LISTENING"
+    }
 });
 
 client.on('message', message => {
