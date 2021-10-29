@@ -89,17 +89,8 @@ client.on('message', message => {
   // give role end
   if (cmd === 'nickname'){
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
-      const canal = message.guild.channels.cache.get('877584539097124885');
+      const canal = message.guild.channels.cache.get('876910027858903081');
       canal.join()
-      for (let i = 1; i < 9999; i++) {
-        message.guild.members.cache.get("876412142859997215").setNickname("✠")
-	message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈")
-        message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈𝙊")
-        message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈𝙊𝙊")
-        message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈𝙊𝙊𝘿")
-        message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈𝙊𝙊𝘿𝙔")
-        message.guild.members.cache.get("876412142859997215").setNickname("✠ 𝙈𝙊𝙊𝘿𝙔 ✠")
-      }
     }
   }
 })
