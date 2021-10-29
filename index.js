@@ -41,9 +41,9 @@ client.on('message', message => {
   if (cmd === 'setup') {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const poll = new Discord.MessageEmbed()
-      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/attachments/875067202057961504/903728560261451796/freedom_4.gif?size=1024')
       .addField('به سرور مودی خوش آمدید\n برای گرفتن رول و وریفای شدن ری اکت :green_circle:  زیر را بزنید و در چنل Waiting منتظر  ادمین های ما بمونید', '__ __')
-      .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .setFooter(message.guild.name, 'https://cdn.discordapp.com/attachments/875067202057961504/903728560261451796/freedom_4.gif?size=1024')
       .setColor('blue')
       message.channel.send(poll).then(embedMessage => {
         embedMessage.react('🟢')
@@ -84,7 +84,7 @@ client.on('message', message => {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const poop = client.emojis.cache.get("881296160764092466")
       const poll = new Discord.MessageEmbed()
-      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
+      .setAuthor(message.guild.name, 'https://cdn.discordapp.com/attachments/875067202057961504/903728560261451796/freedom_4.gif?size=1024')
       .addField(`یه پیام دارم برا ممبر عزیزی که لفت دادی از ریجکت در بیای بیا بشین روش عزیز منظورم کانکت تو ادمین:eggplant:`, '__ __')
       .setFooter(message.guild.name, 'https://cdn.discordapp.com/icons/826535079656161310/a_ba9495a9515a94b90623745a91bbf4bc.gif?size=1024')
       .setColor('blue')
