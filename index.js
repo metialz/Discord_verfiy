@@ -6,15 +6,16 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
 	console.log('Ready!');
-});
-
-client.user.setPresence({
-    status: "online",
-    activity: {
+	client.user.setPresence({
+   	status: "online",
+   	activity: {
         name: "𝗦𝗘𝗡𝗧𝗜𝗠𝗘𝗡𝗧",
         type: "LISTENING"
     }
 });
+});
+
+
 
 client.on('message', message => {
 	if (message.channel.id === '887347686083285012'){
