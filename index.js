@@ -42,7 +42,7 @@ client.on('message', message => {
     if (message.member.roles.cache.some(role => role.id === '874693067045732363')) {
       const poll = new Discord.MessageEmbed()
       .setAuthor(message.guild.name, 'https://cdn.discordapp.com/attachments/875067202057961504/903728560261451796/freedom_4.gif?size=1024')
-      .addField('به سرور مودی خوش آمدید\n برای گرفتن رول و وریفای شدن ری اکت :green_circle:  زیر را بزنید و در چنل Waiting منتظر  ادمین های ما بمونید', '__ __')
+      .addField('به سرور 𝗦𝗘𝗡𝗧𝗜𝗠𝗘𝗡𝗧 خوش آمدید\n برای گرفتن رول و وریفای شدن ری اکت :green_circle:  زیر را بزنید و در چنل Waiting منتظر  ادمین های ما بمونید', '__ __')
       .setFooter(message.guild.name, 'https://cdn.discordapp.com/attachments/875067202057961504/903728560261451796/freedom_4.gif?size=1024')
       .setColor('blue')
       message.channel.send(poll).then(embedMessage => {
